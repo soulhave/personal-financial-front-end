@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
+## Big View
+![big view](./model/big-eye.png)
+
 ## Plugins and tools
 [Angular Language Service - Vscode Plugin](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 
