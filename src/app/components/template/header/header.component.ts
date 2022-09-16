@@ -1,3 +1,4 @@
+import { DrawerService } from './../../../services/drawer.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private drawerService: DrawerService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
-  abrirMenu(){
-
+  toggleDrawer(){
+    this.drawerService.toggle()
   }
 
 }
