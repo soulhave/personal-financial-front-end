@@ -11,10 +11,10 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
   }
 
- toggleDrawer(){
+  toggleDrawer() {
     if (this.navComponent != null) {
       this.navComponent.drawer.toggle();
     }

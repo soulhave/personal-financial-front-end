@@ -9,12 +9,12 @@ describe('NavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavComponent ],
+      declarations: [NavComponent],
       schemas: [
         NO_ERRORS_SCHEMA
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NavComponent);
     component = fixture.componentInstance;

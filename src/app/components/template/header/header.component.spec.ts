@@ -11,8 +11,9 @@ describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
-  beforeEach(() => { TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [HeaderComponent],
       imports: [
         NoopAnimationsModule,
         MaterialModule
@@ -21,7 +22,7 @@ describe('HeaderComponent', () => {
         CUSTOM_ELEMENTS_SCHEMA
       ]
     }).compileComponents();
-    
+
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -37,7 +38,7 @@ describe('HeaderComponent', () => {
     const matDrawerComponent = TestBed.createComponent(MatDrawer).componentInstance;
     navComponent.drawer = matDrawerComponent;
     component.navComponent = navComponent;
-    
+
     // Act
     component.toggleDrawer();
 
@@ -51,7 +52,7 @@ describe('HeaderComponent', () => {
     const matDrawerComponent = TestBed.createComponent(MatDrawer).componentInstance;
     navComponent.drawer = matDrawerComponent;
     component.navComponent = navComponent;
-    
+
     // Act
     component.toggleDrawer(); // open
     component.toggleDrawer(); // close
