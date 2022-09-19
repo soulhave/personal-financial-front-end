@@ -1,5 +1,5 @@
-import { DrawerService } from './../../../services/drawer.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavComponent } from '../nav/nav.component';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() navComponent!: NavComponent;
 
-  constructor(private drawerService: DrawerService) { }
+  constructor() { }
 
   ngOnInit(): void { 
   }
 
-  toggleDrawer(){
-    this.drawerService.toggle()
+ toggleDrawer(){
+    if (this.navComponent != null) {
+      this.navComponent.drawer.toggle();
+    }
   }
-
 }
