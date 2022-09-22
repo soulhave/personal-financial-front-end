@@ -1,13 +1,11 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.4.0
+
 jobs:
   dependencies:
     docker:
-      - image: cimg/lts-browsers
-        auth:
-          username: $DOCKER_USER
-          password: $DOCKER_PASS
+      - image: cimg/node:lts-browsers
     steps:
       - checkout
       - run: npm install
@@ -21,10 +19,7 @@ jobs:
 
   linter:
     docker:
-      - image: cimg/lts-browsers
-        auth:
-          username: $DOCKER_USER
-          password: $DOCKER_PASS
+      - image: cimg/node:lts-browsers
     steps:
       - checkout
       - restore_cache:
@@ -38,10 +33,7 @@ jobs:
 
   tests:
     docker:
-      - image: cimg/lts-browsers
-        auth:
-          username: $DOCKER_USER
-          password: $DOCKER_PASS
+      - image: cimg/node:lts-browsers
     steps:
       - checkout
       - restore_cache:
@@ -62,10 +54,7 @@ jobs:
 
   build:
     docker:
-      - image: cimg/lts-browsers
-        auth:
-          username: $DOCKER_USER
-          password: $DOCKER_PASS
+      - image: cimg/node:lts-browsers
     steps:
       - checkout
       - restore_cache:
@@ -89,4 +78,5 @@ workflows:
             - dependencies
       - build:
           requires:
-            - dependencies
+            - linter
+            - tests
