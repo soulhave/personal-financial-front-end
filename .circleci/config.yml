@@ -35,9 +35,6 @@ jobs:
       - checkout
       - restore_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run:
-          name: "Link Angular CLI Version"
-          command: npm link @angular/cli@14.2.2
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - run:
