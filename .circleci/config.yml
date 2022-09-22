@@ -4,7 +4,10 @@ orbs:
 jobs:
   dependencies:
     docker:
-      - image: cimg/16.17.0-browsers
+      - image: cimg/lts-browsers
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASS
     steps:
       - checkout
       - run: npm install
@@ -18,28 +21,34 @@ jobs:
 
   linter:
     docker:
-      - image: cimg/16.17.0-browsers
+      - image: cimg/lts-browsers
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASS
     steps:
       - checkout
       - restore_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: "Link Angular CLI Version"
-          command: npm link @angular/cli@11.2.6
+          command: npm link @angular/cli@14.2.2
       - run:
           name: "Run Linter"
           command: ng lint
 
   tests:
     docker:
-      - image: cimg/16.17.0-browsers
+      - image: cimg/lts-browsers
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASS
     steps:
       - checkout
       - restore_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: "Link Angular CLI Version"
-          command: npm link @angular/cli@11.2.6
+          command: npm link @angular/cli@14.2.2
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - run:
@@ -53,14 +62,17 @@ jobs:
 
   build:
     docker:
-      - image: cimg/16.17.0-browsers
+      - image: cimg/lts-browsers
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASS
     steps:
       - checkout
       - restore_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: "Link Angular CLI Version"
-          command: npm link @angular/cli@11.2.6
+          command: npm link @angular/cli@14.2.2
       - run:
           name: "Build Angular Package"
           command: npm run build
@@ -69,6 +81,12 @@ workflows:
   angular-ci:
     jobs:
       - dependencies
-      - linter
-      - tests
-      - build
+      - linter:
+          requires:
+            - dependencies
+      - tests:
+          requires:
+            - dependencies
+      - build:
+          requires:
+            - dependencies
