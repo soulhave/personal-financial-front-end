@@ -44,7 +44,7 @@ jobs:
           name: "Check Chrome Install"
       - run:
           name: "Run Tests"
-          command: npm run test --no-watch --no-progress --browsers=ChromeHeadless
+          command: npm run testci
 
   build:
     docker:
