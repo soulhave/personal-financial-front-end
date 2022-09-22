@@ -48,7 +48,6 @@ jobs:
           environment:
             JUNIT_REPORT_PATH: ./junit/
             JUNIT_REPORT_NAME: test-results.xml
-          when: always
       - store_test_results:
         path: ./junit
       - run:
