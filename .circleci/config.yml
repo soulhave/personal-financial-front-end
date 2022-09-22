@@ -46,7 +46,7 @@ jobs:
           name: "Run Tests"
           command: npm run testci
       - store_test_results:
-          path: TESTS.xml
+          path: ./TESTS.xml
       - run:
           name: "Coverall"
           command: cat ./coverage/personal-financial-front-end/lcov.info | ./node_modules/coveralls/bin/coveralls.js
