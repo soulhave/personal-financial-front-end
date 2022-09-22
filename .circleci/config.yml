@@ -4,7 +4,7 @@ orbs:
 jobs:
   dependencies:
     docker:
-      - image: cimg/16.17.0-browsers
+      - image: cimg/lts-browsers
     steps:
       - checkout
       - run: npm install
@@ -69,6 +69,12 @@ workflows:
   angular-ci:
     jobs:
       - dependencies
-      - linter
-      - tests
-      - build
+      - linter:
+          requires:
+            - dependencies
+      - tests:
+          requires:
+            - dependencies
+      - build:
+          requires:
+            - dependencies
