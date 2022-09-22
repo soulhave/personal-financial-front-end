@@ -46,11 +46,11 @@ jobs:
           name: "Run Tests"
           command: npm run testci
           environment:
-            JUNIT_REPORT_PATH: ./
-            JUNIT_REPORT_NAME: TESTS.xml
+            JUNIT_REPORT_PATH: ./junit
+            JUNIT_REPORT_NAME: test-results.xml
           when: always
       - store_test_results:
-          path: ./
+          path: ./junit
       - run:
           name: "Coverall"
           command: cat ./coverage/personal-financial-front-end/lcov.info | ./node_modules/coveralls/bin/coveralls.js

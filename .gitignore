@@ -35,7 +35,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-TESTS.xml
+/junit
 
 ### Angular ###
 ## Angular ##

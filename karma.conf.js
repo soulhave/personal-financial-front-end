@@ -44,8 +44,8 @@ module.exports = function (config) {
       }
     },
     junitReporter: {
-      outputDir: process.env.JUNIT_REPORT_PATH,
-      outputFile: process.env.JUNIT_REPORT_NAME,
+      outputDir: "./junit/",
+      outputFile: "test-results.xml",
       useBrowserName: false
     },
     reporters: ['progress', 'kjhtml', 'junit'],
