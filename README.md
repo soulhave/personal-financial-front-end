@@ -1,5 +1,7 @@
 # Personal Financial FrontEnd Module
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/soulhave/personal-financial-front-end/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/soulhave/personal-financial-front-end/tree/main)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
 ## Big View
