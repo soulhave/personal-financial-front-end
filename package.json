@@ -6,7 +6,8 @@
     "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --browsers Chrome",
+    "coverage": "ng test --no-watch --code-coverage --browsers Chrome",
     "testci": "ng test --no-watch --no-progress --browsers=ChromeHeadless --code-coverage",
     "lint": "ng lint"
   },

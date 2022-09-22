@@ -1,0 +1,19 @@
+<mat-drawer-container class="mat-drawer-contanier-content">
+  <mat-drawer #drawer class="mat-drawer-menu" mode="over">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/detail']">
+        <mat-icon class="material-icons-outlined" mat-list-icon>monetization_on</mat-icon>
+        <span matLine>Receitas</span>
+      </a>
+      <a mat-list-item [routerLink]="['/detail']">
+        <mat-icon class="material-icons-outlined" mat-list-icon>payments</mat-icon>
+        <span matLine>Gastos</span>
+      </a>
+      <a mat-list-item [routerLink]="['/detail']">
+        <mat-icon class="material-icons-outlined" mat-list-icon>show_chart</mat-icon>
+        <span matLine>Investimentos</span>
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>Content</mat-drawer-content>
+</mat-drawer-container>
