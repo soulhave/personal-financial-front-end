@@ -8,7 +8,3 @@ import { flatMap } from 'rxjs';
 })
 export class AppComponent {
 }
-
-function PlanoFinal(params:number) {
-  console.log("---");
-}
