@@ -49,7 +49,7 @@ jobs:
             JUNIT_REPORT_PATH: ./junit/
             JUNIT_REPORT_NAME: test-results.xml
       - store_test_results:
-        path: ./junit
+          path: ./junit
       - run:
           name: "Coverall"
           command: cat ./coverage/personal-financial-front-end/lcov.info | ./node_modules/coveralls/bin/coveralls.js
