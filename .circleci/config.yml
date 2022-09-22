@@ -25,9 +25,6 @@ jobs:
       - restore_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
-          name: "Link Angular CLI Version"
-          command: npm link @angular/cli@14.2.2
-      - run:
           name: "Run Linter"
           command: npm run lint
 
@@ -59,9 +56,6 @@ jobs:
       - checkout
       - restore_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run:
-          name: "Link Angular CLI Version"
-          command: npm link @angular/cli@14.2.2
       - run:
           name: "Build Angular Package"
           command: npm run build
