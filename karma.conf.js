@@ -9,6 +9,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
+      require('karma-junit-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
@@ -30,6 +31,7 @@ module.exports = function (config) {
       reporters: [
         { type: 'html' },
         { type: 'lcov' },
+        { type: 'cobertura' },
         { type: 'text-summary' }
       ],
       check: {
@@ -41,7 +43,12 @@ module.exports = function (config) {
         }
       }
     },
-    reporters: ['progress', 'kjhtml'],
+    junitReporter: {
+      outputDir: process.env.JUNIT_REPORT_PATH,
+      outputFile: process.env.JUNIT_REPORT_NAME,
+      useBrowserName: false
+    },
+    reporters: ['progress', 'kjhtml', 'junit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
