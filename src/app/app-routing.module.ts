@@ -1,9 +1,9 @@
-import { IncomeReadComponent } from './components/income/income-read/income-read.component';
+import { ExpenseListComponent } from './components/expenses/expense-list/expense-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [{
-  path: "", component: IncomeReadComponent
+  path: "", component: ExpenseListComponent
 }];
 
 @NgModule({

@@ -1,4 +1,12 @@
 .mat-drawer-contanier-content {
-  height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-drawer-content-inner {
+  width: 98vw;
+  padding-top: 1vh;
+  height: 98vh;
+  // border: 2px dashed red;
 }

@@ -1,0 +1,58 @@
+.expense-list-table-div,
+.expense-list-button-new-div {
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1vh;
+}
+
+.expense-list-container {
+  border-top: 1vh;
+  height: 86vh;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.expense-mat-table {
+  width: 99%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+.mat-column-type {
+  max-width: 400px;
+}
+
+.max-column-total {
+  text-align: end;
+}
+
+.mat-column-date {
+  text-align: center;
+}
+
+.mat-column-action {
+  text-align: end;
+}
+
+.mat-header-cell,
+.mat-footer-cell,
+.mat-cell {
+  box-sizing: border-box;
+}
+
+.mat-table-sticky {
+  background: #59abfd;
+  opacity: 1;
+}
+
+.mat-column-filler {
+  padding: 0 8px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.mat-table-sticky-border-elem-top {
+  border-bottom: 2px solid midnightblue;
+}
