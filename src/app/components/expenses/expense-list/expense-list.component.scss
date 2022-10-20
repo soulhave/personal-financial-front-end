@@ -1,39 +1,57 @@
-.expense-list-table-div,
-.expense-list-button-new-div {
+.expense-list-action-bar {
   margin: auto;
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 1vh;
+  padding: 1vh 0;
+  margin: 0 8px;
+}
+
+.mat-raised-button {
+  padding: 0 40px;
 }
 
 .expense-list-container {
   border-top: 1vh;
-  height: 86vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   overflow: auto;
+  margin: 0 8px;
 }
 
+// .expense-list-container:hover {
+//   overflow-y: scroll;
+// }
+
 .expense-mat-table {
-  width: 99%;
+  width: 100%;
   height: 100%;
   table-layout: fixed;
 }
 
 .mat-column-type {
-  max-width: 400px;
+  min-width: 5px;
+  max-width: 10px;
 }
 
 .max-column-total {
+  min-width: 5px;
+  max-width: 10px;
   text-align: end;
 }
 
 .mat-column-date {
-  text-align: center;
+  text-align: start;
+  min-width: 5px;
+  max-width: 10px;
 }
 
 .mat-column-action {
   text-align: end;
+  min-width: 110px;
+  max-width: 200px;
+  // max-width: 200px;
+  // width: 110px;
 }
 
 .mat-header-cell,
@@ -42,17 +60,8 @@
   box-sizing: border-box;
 }
 
-// .mat-table-sticky {
-//   background: #59abfd;
-//   opacity: 1;
-// }
-
 .mat-column-filler {
   padding: 0 8px;
   font-size: 10px;
   text-align: center;
 }
-
-// .mat-table-sticky-border-elem-top {
-//   border-bottom: 2px solid midnightblue;
-// }
