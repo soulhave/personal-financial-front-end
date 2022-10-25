@@ -1,4 +1,9 @@
-.mat-drawer-contanier-content {
-  height: 100%;
+.mat-drawer-nav-contanier-content {
   width: 100%;
+}
+
+.mat-drawer-content-inner {
+  width: 100%;
+  height: 99vh;
+  // border: 2px dashed red;
 }

@@ -1,0 +1,67 @@
+.expense-list-action-bar {
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1vh 0;
+  margin: 0 8px;
+}
+
+.mat-raised-button {
+  padding: 0 40px;
+}
+
+.expense-list-container {
+  border-top: 1vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  margin: 0 8px;
+}
+
+// .expense-list-container:hover {
+//   overflow-y: scroll;
+// }
+
+.expense-mat-table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+.mat-column-type {
+  min-width: 5px;
+  max-width: 10px;
+}
+
+.max-column-total {
+  min-width: 5px;
+  max-width: 10px;
+  text-align: end;
+}
+
+.mat-column-date {
+  text-align: start;
+  min-width: 5px;
+  max-width: 10px;
+}
+
+.mat-column-action {
+  text-align: end;
+  min-width: 110px;
+  max-width: 200px;
+  // max-width: 200px;
+  // width: 110px;
+}
+
+.mat-header-cell,
+.mat-footer-cell,
+.mat-cell {
+  box-sizing: border-box;
+}
+
+.mat-column-filler {
+  padding: 0 8px;
+  font-size: 10px;
+  text-align: center;
+}

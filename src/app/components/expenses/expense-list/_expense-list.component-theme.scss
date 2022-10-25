@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+
+  .mat-table-sticky {
+    background: map.get($color-config, 'accent');
+    opacity: 1;
+  }
+
+  .mat-table-sticky-border-elem-top {
+    border-bottom: 2px solid map.get($color-config, 'accent');
+  }
+}
