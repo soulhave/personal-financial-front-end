@@ -19,10 +19,12 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let row">
-        <button mat-icon-button color="primary">
+        <button mat-icon-button color="primary" matTooltip="Clique para editar a despesa"
+          aria-label="Botão para editar uma despesa" matTooltipPosition="left">
           <mat-icon>edit_note</mat-icon>
         </button>
-        <button mat-icon-button color="primary">
+        <button mat-icon-button color="primary" matTooltip="Clique para deletar a despesa"
+          aria-label="Botão para excluir uma despesa" matTooltipPosition="left">
           <mat-icon>delete</mat-icon>
         </button>
       </td>
